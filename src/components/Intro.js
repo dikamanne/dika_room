@@ -6,7 +6,12 @@ import FadeInSection from "./FadeInSection";
 class Intro extends React.Component {
   render() {
     return (
+      
       <div id="intro">
+        <div className="intro-banner">
+          <img src="images/banner-image.jpg" />
+        </div>
+      
         <div className="intro-title">
         <Typewriter
           words={['dika manne']}
@@ -18,7 +23,7 @@ class Intro extends React.Component {
 
         <FadeInSection>
           <div className="intro-subtitle">
-            developer | data analyst | mapper
+            developer | policy and data analyst | mapper
           </div>
         </FadeInSection>
       </div>

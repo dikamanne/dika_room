@@ -1,0 +1,57 @@
+#about {
+  margin: auto;
+  padding-top: 1px;
+max-width: 1000px;
+min-height: 50vh;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.about-description {
+  font-family: "NTR", sans-serif;
+  color: var(--black);
+  max-width: 1200px;
+  font-size: 22px;
+  text-align: justify;
+  margin: 0;
+}
+
+.about-description a,
+.about-description b {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.about-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-list {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-list h4 {
+  font-size: 20px;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.about-list ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.about-list li {
+  font-size: 16px;
+  color: var(--slate);
+  margin-bottom: 6px;
+}

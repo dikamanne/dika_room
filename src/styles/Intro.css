@@ -1,3 +1,12 @@
+.intro-banner img {
+  width: 100vw;
+  height: 250px; /* adjust as needed */
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
 #intro {
   display: flex;
   flex-direction: column;
@@ -5,32 +14,34 @@
   text-align: center;
   margin: auto;
   max-width: 1000px;
-  padding-top: 200px;
-  min-height: 100vh;
+  padding-top: 40px;
+  min-height: 90vh;
 }
 
+
+
 .Typist {
-  color: var(--dusty-pink);
+  color: var(--black );
   text-align: center;
   font-size: 76px;
   margin-top: -30px;
 }
 .Typist .Cursor--blinking {
-  color: var(--dusty-pink);
+  color: var(--black);
   padding-left: 4px;
 }
 
 .intro-title {
   font-family: "Regards Regular", sans-serif;
-  color: var(--dusty-pink);
+  color: var(--black);
   font-weight: bold;
   font-size: 86px;
 }
 
 .intro-subtitle {
-  margin-top: -36px;
+  margin-top: 36px;
   font-family: "Regards Regular", sans-serif;
-  color: var(--dusty-pink);
+  color: var(--black);
   text-align: center;
   font-weight: 300;
   font-size: 48px;
