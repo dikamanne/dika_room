@@ -26,13 +26,12 @@ class Projects extends React.Component {
       "Policy + Data Analysis Mini Report": {
         title: "policy + data analysis mini report",
         desc: "A policy + data analysis mini report",
-        techStack: "STATA",
+        techStack: ["STATA"],
         link: "https://github.com/dikamanne",
         open: "https://github.com/dikamanne",
         image: "/images/data_viz.png"
       }
     };
-
 
 
     return (
@@ -81,29 +80,61 @@ class Projects extends React.Component {
           </Carousel>
         )}
 
-        {view === "grid" && (
-          <div className="project-container">
-            <ul className="projects-grid">
+{view === "grid" && (
+          <div className="notion-gallery-container">
+            <div className="notion-gallery-grid">
               {Object.keys(Projects).map((key, i) => (
                 <FadeInSection key={key} delay={`${i + 1}00ms`}>
-                  <li className="projects-card">
-                    <div className="card-header">
-                      <div className="folder-icon">
-                        <FolderOpenRoundedIcon style={{ fontSize: 35 }} />
+                  <div className="notion-card">
+                    {/* Image section */}
+                    {Projects[key].image && (
+                      <div className="notion-card__image-container">
+                        <img 
+                          src={Projects[key].image} 
+                          alt={Projects[key].title}
+                          className="notion-card__image"
+                        />
                       </div>
-                      <ExternalLinks
-                        githubLink={Projects[key].link}
-                        openLink={Projects[key].open}
-                      />
+                    )}
+                    
+                    {/* Content section */}
+                    <div className="notion-card__content">
+                      {/* Title */}
+                      <h3 className="notion-card__title">
+                        {Projects[key].title}
+                      </h3>
+                      
+                      {/* Description */}
+                      <p className="notion-card__description">
+                        {Projects[key].desc}
+                      </p>
+                      
+                      {/* Tech Stack Tags */}
+                      {Projects[key].techStack && (
+                        <div className="notion-card__tags">
+                          {Projects[key].techStack.map((tech, index) => (
+                            <span 
+                              key={index}
+                              className="notion-card__tag"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      
+                      {/* External Links */}
+                      <div className="notion-card__links">
+                        <ExternalLinks
+                          githubLink={Projects[key].link}
+                          openLink={Projects[key].open}
+                        />
+                      </div>
                     </div>
-
-                    <div className="card-title">{key}</div>
-                    <div className="card-desc">{Projects[key].desc}</div>
-                    <div className="card-tech">{Projects[key].techStack}</div>
-                  </li>
+                  </div>
                 </FadeInSection>
               ))}
-            </ul>
+            </div>
           </div>
         )}
       </div>

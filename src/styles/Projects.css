@@ -7,7 +7,7 @@
   
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -17,12 +17,13 @@
     }
   }
 
-/* card carousel */
+/* card  */
 .projects-card {
-    display: flex;
+    position: relative;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 300px;
+  height: 0;
+  padding-bottom: 100%; /* Makes it square */
   background-color: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
@@ -34,20 +35,27 @@
   .projects-card:hover {
     background-color: var(--light-pink);
     transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   }
   
-  .card-header {
-    margin-top: -20px;
+  .card-content {
+    position: absolute;
+    top: 0;
+    bottom: 48px; /* reserve space for footer */
+    left: 0;
+    right: 0;
+    padding: 16px;
     display: flex;
-    padding: 1.25em 0 !important;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    border-bottom: none !important;
   }
-  .folder-icon {
-    color: var(--cream);
+  .card-header {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
   }
+ 
   
   .github-icon {
     margin-top: 6px;
@@ -61,29 +69,34 @@
   }
   
   .card-title {
-    font-size: 18px;
-  font-weight: bold;
-  color: var(--black);
-  margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 4px;
   }
   
   .card-desc {
     font-family: "NTR", sans-serif;
     color: var(--cream);
-    font-size: 18px;
-    padding-bottom: 40px;
+    font-size: 14px;
+    flex-grow: 1;
+    margin-bottom: 12px;
   }
   
-  .card-tech {
-    font-family: "NTR", sans-serif;
-    color: var(--cream);
-    font-size: 16px;
-  }
-
+  
   .card-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding: 12px 16px;
-    background-color: var(--white);
+    background-color: var(--cream);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--cream);
   }
   
   /* carousel */
@@ -190,4 +203,109 @@
     .carousel {
       display: none;
     }
+  }
+
+  .notion-gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .notion-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  /* Responsive grid */
+  @media (min-width: 640px) {
+    .notion-gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .notion-gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Notion Card Styles */
+  .notion-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: fit-content;
+  }
+  
+  .notion-card:hover {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+  }
+  
+  .notion-card__image-container {
+    aspect-ratio: 16 / 9;
+    background-color: #f3f4f6;
+    overflow: hidden;
+  }
+  
+  .notion-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .notion-card__content {
+    padding: 16px;
+  }
+  
+  .notion-card__title {
+    font-weight: 500;
+    color: #111827;
+    font-size: 16px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 0;
+    text-transform: capitalize;
+  }
+  
+  .notion-card__description {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 0;
+  }
+  
+  .notion-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .notion-card__tag {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: #374151;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .notion-card__links {
+    margin-top: auto;
+    padding-top: 8px;
   }
