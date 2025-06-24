@@ -23,12 +23,12 @@ class Projects extends React.Component {
     const { view } = this.state;
 
     const Projects = {
-      "Policy + Data Analysis Mini Report": {
-        title: "policy + data analysis mini report",
-        desc: "A policy + data analysis mini report",
+      "Family Income Educational Attainment Case Study": {
+        title: "Family Income Educational Attainment Case Study",
+        desc: "How did total family income influence pre-pandemic educational attainment in the US, controlling for factors such as school type, family structure, etc.?",
         techStack: ["STATA"],
-        link: "https://github.com/dikamanne",
-        open: "https://github.com/dikamanne",
+        link: "https://github.com/dikamanne/Family-Income-Educational-Attainment-Case-Study",
+        open: "https://docs.google.com/document/d/1CouLOKFdHgc4YHCB95cKCwHOz3iBLHlaHvcPBRqzlnE/edit?usp=sharing",
         image: "/images/data_viz.png"
       }
     };
