@@ -1,0 +1,25 @@
+.navbar {
+    background-color: var(--white);
+    color: var(--white);
+    font-family: 'Regards';
+    font-weight: bold;
+  }
+
+
+  .navbar-light .navbar-nav .nav-link {
+    color: var(--dusty-pink) !important;
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--pink) !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .navbar-light .navbar-brand  {
+        display: none;
+    }
+  
+    .navbar-light .navbar-nav.me-auto .nav-link {
+        display: none;
+      }
+  }
