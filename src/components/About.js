@@ -14,12 +14,8 @@ class About extends React.Component {
       </p>
     );
 
-    const outro = (
-      <p>
-        I hope to use this information to present ways in which governance and development in Africa
-        can be improved.
-      </p>
-    );
+    
+  
 
     const tech_stack = [
       "Typescript", "Python", "React.js", "Java", "Javascript ES6+", "R", "STATA"
@@ -61,7 +57,7 @@ class About extends React.Component {
               </div>
             </div>
 
-            <div className="about-description">{outro}</div>
+            
           </div>
         </FadeInSection>
       </div>

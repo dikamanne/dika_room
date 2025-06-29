@@ -9,13 +9,13 @@ class Projects extends React.Component {
   constructor() {
     super();
     this.state = {
-      view: "carousel" // 'carousel' or 'grid'
+      view: "grid" // 'carousel' or 'grid'
     };
   }
 
   toggleView = () => {
     this.setState((prevState) => ({
-      view: prevState.view === "carousel" ? "grid" : "carousel"
+      view: prevState.view === "carousel" ? "grid" : "grid"
     }));
   };
 
@@ -42,16 +42,16 @@ class Projects extends React.Component {
 
         <div className="view-toggle-container">
         <button
-          className={`view-toggle-btn ${this.state.view === "carousel" ? "active" : ""}`}
-          onClick={() => this.setState({ view: "carousel" })}
-        >
-        Carousel View
-        </button>
-        <button
           className={`view-toggle-btn ${this.state.view === "grid" ? "active" : ""}`}
           onClick={() => this.setState({ view: "grid" })}
         >
         Grid View
+        </button>
+        <button
+          className={`view-toggle-btn ${this.state.view === "carousel" ? "active" : ""}`}
+          onClick={() => this.setState({ view: "carousel" })}
+        >
+        Carousel View
         </button>
       </div>
 
