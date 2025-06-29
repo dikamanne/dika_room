@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Dika's Portfolio
 
 This is my personal website and portfolio. 
 
