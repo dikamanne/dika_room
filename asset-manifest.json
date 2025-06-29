@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dika_room/static/css/main.b21d5722.css",
+    "main.js": "/dika_room/static/js/main.884ed346.js",
+    "static/js/787.0eb29a1d.chunk.js": "/dika_room/static/js/787.0eb29a1d.chunk.js",
+    "index.html": "/dika_room/index.html",
+    "main.b21d5722.css.map": "/dika_room/static/css/main.b21d5722.css.map",
+    "main.884ed346.js.map": "/dika_room/static/js/main.884ed346.js.map",
+    "787.0eb29a1d.chunk.js.map": "/dika_room/static/js/787.0eb29a1d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b21d5722.css",
+    "static/js/main.884ed346.js"
+  ]
+}
