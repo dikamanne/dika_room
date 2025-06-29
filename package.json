@@ -2,6 +2,7 @@
   "name": "dika_room",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dikamanne.github.io/dika_room",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -11,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.7",
+    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^18.2.0",
@@ -18,7 +20,6 @@
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "react-simple-typewriter": "^5.0.1",
-    "react-typist": "^2.0.5",
     "rsuite": "^5.83.0",
     "web-vitals": "^2.1.4"
   },
@@ -26,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject", 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
