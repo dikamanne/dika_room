@@ -1,6 +1,7 @@
 # Dika's Portfolio
 
 This is my personal website and portfolio. 
+[Website] (https://dikamanne.github.io/dika_room/)
 
 It was built with JavaScript on a React framework. 
 
